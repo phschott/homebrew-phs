@@ -1,11 +1,11 @@
 cask "peugeot-update" do
   version "1.5.2"
-  sha256 "aaef7dc64eab2c29e6c1746f8f92c51279d9123b6857724ac6c4c425b083b0e0"
+  sha256 :no_check
 
-  # url "https://fr.ndp.awsmpsa.com/majesticinstaller/peugeot_update.dmg"
-  url "https://d1tik0o5ahgjm.cloudfront.net/peugeot/peugeot_update.dmg"
+  url "https://d1tik0o5ahgjm.cloudfront.net/peugeot/peugeot_update.dmg", 
+    verified: "d1tik0o5ahgjm.cloudfront.net/peugeot/"
   name "Peugeot Update"
-  desc "Update Peugeot ystem"
+  desc "Update Peugeot system"
   homepage "https://www.peugeot.fr/"
   
   livecheck do

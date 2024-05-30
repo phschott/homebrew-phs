@@ -1,6 +1,6 @@
 cask "tomtommydriveconnect" do
   version "4.3.4.5022"
-  sha256 "467d8dbe260b8d0152bc8e31109d84c684511e2dc46f90f294865bb793e7417f"
+  sha256 :no_check
 
   url "https://cdn.sa.services.tomtom.com/static/sa/Mac/TomTomMyDriveConnect.dmg"
   name "TomTom My Drive Connect"
