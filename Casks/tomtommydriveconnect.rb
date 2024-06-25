@@ -4,9 +4,9 @@ cask "tomtommydriveconnect" do
 
   url "https://cdn.sa.services.tomtom.com/static/sa/Mac/TomTomMyDriveConnect.dmg"
   name "TomTom My Drive Connect"
-  desc "TomTom My Drive Connect"
-  homepage "https://www.tomtom.com"
-  
+  desc "Install TomTom My Drive Connect"
+  homepage "https://www.tomtom.com/"
+
   livecheck do
     skip "No version information available"
   end
@@ -17,12 +17,10 @@ cask "tomtommydriveconnect" do
 
   uninstall pkgutil: "com.tomtom.mytomtomsa.pkg"
   uninstall pkgutil: [
-    "com.tomtom.mytomtomsa.pkg",
-    "com.tomtom.mytomtomsa.temp.pkg"
-  ],
-  delete:  "/Applications/TomTom MyDrive Connect.app"
+              "com.tomtom.mytomtomsa.pkg",
+              "com.tomtom.mytomtomsa.temp.pkg",
+            ],
+            delete:  "/Applications/TomTom MyDrive Connect.app"
 
-  zap trash: [
-    "~/Library/Application Support/TomTom"
-  ]
+  zap trash: "~/Library/Application Support/TomTom"
 end
