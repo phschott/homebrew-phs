@@ -4,7 +4,7 @@ cask "tomtommydriveconnect" do
 
   url "https://cdn.sa.services.tomtom.com/static/sa/Mac/TomTomMyDriveConnect.dmg"
   name "TomTom My Drive Connect"
-  desc "TomTom My Drive Connect"
+  desc "Install TomTom My Drive Connect"
   homepage "https://www.tomtom.com"
   
   livecheck do
