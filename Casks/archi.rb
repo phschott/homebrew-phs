@@ -5,7 +5,7 @@ cask "archi" do
   sha256 arm:   "603b531c08a2867509f52b042774d683b46cd66f0afffa580e6d0a9b20cdf0fa",
          intel: "d98dd38df475a650cc4e24a6a642430ecffdd57fce1d4287c96bf0e2f5cc93d6"
 
-  url "https://www.archimatetool.com/downloads/archi/#{version.major_minor}/Archi-Mac-#{arch}#{version}.dmg"
+  url "https://www.archimatetool.com/downloads/archi/#{version}/Archi-Mac-#{arch}#{version}.dmg"
   name "Archimate modeling"
   desc "Toolkit for the ArchiMate modelling language"
   homepage "https://www.archimatetool.com/"
