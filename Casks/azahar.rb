@@ -2,7 +2,8 @@ cask "azahar" do
   version "2120.2"
   sha256 "74a0cad400ffc9fcb590a82d0660474ac0898e02eac5c3a9b8c08096d3af0b07"
 
-  url "https://github.com/azahar-emu/azahar/releases/download/#{version}/azahar-#{version}-macos-universal.zip"
+  url "https://github.com/azahar-emu/azahar/releases/download/#{version}/azahar-#{version}-macos-universal.zip",
+      verified: "github.com/azahar-emu/"
   name "Azahar"
   desc "Nintendo 3DS emulator"
   homepage "https://azahar-emu.org/"
