@@ -42,6 +42,12 @@ $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-ph
 ### Adding a Cask
 With a bit of work, you can create a new Cask. The document [Adding A Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md) will help you create, test, and submit a new Cask.
 
+### Update a Cask version
+If you need to update the cask to latest version, run the following command line to update the script and then push to a new branch in github before creating a pull request.
+```bash
+    brew bump-cask-pr --write-only --version {latest version} {cask}
+```
+
 ## Resolving damaged issue
 If your Mac states that it cannot run App because it is "damaged" (it isn't) run the following command from the Terminal app.
 
