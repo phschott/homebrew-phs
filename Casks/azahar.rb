@@ -8,11 +8,14 @@ cask "azahar" do
   desc "Nintendo 3DS emulator"
   homepage "https://azahar-emu.org/"
 
+  # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
-    skip "No version information available"
+    url "https://github.com/azahar-emu/azahar/releases"
+    strategy :page_match
+    regex(%r{href=.*?tag/?(\d+(?:\.\d+)*)}i)
   end
 
-  auto_updates false
+  depends_on macos: ">= :big_sur"
 
   app "azahar-#{version}-macos-universal/Azahar.app"
 
