@@ -19,13 +19,13 @@ cask "azahar" do
 
   app "azahar-#{version}-macos-universal/Azahar.app"
 
-  def caveats
+  zap trash: "~/Library/Application Support/Azahar"
+
+  caveats do
     <<~EOS
       To remove application from quarantine execute the following command
         xattr -r -d com.apple.quarantine #{appdir}/Azahar.app
       Or install cask using --no-quarantine option
     EOS
   end
-
-  zap trash: "~/Library/Application Support/Azahar"
 end
