@@ -1,6 +1,6 @@
 cask "azahar" do
-  version "2122.1"
-  sha256 "a9adf930747b65b962003fc0057c2dc95ebe0872a51e29e451785e9a9f34101b"
+  version "2123.2"
+  sha256 "aa097bd462bc79e88d233dd563a02eb48e866179138b87ec4986acead8dfbb9d"
 
   url "https://github.com/azahar-emu/azahar/releases/download/#{version}/azahar-#{version}-macos-universal.zip",
       verified: "github.com/azahar-emu/"
@@ -15,7 +15,7 @@ cask "azahar" do
     regex(%r{href=.*?tag/?(\d+(?:\.\d+)*)}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "azahar-#{version}-macos-universal/Azahar.app"
 
