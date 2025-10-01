@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         # ubuntu-22.04
-        os: [ ubuntu-22.04, macos-13, macos-15, macos-15-intel, macos-26 ]
+        os: [ macos-13, macos-15, macos-15-intel, macos-26 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
