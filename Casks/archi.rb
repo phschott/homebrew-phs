@@ -22,13 +22,13 @@ cask "archi" do
 
   app "Archi.app"
 
-  def caveats
+  zap trash: "~/Library/Application Support/Archi"
+
+  caveats do
     <<~EOS
       To remove application from quarantine execute the following command
         xattr -r -d com.apple.quarantine #{appdir}/Archi.app
       Or install cask using --no-quarantine option
     EOS
   end
-
-  zap trash: "~/Library/Application Support/Archi"
 end
