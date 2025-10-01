@@ -22,7 +22,7 @@ cask "archi" do
 
   app "Archi.app"
 
-  define_method(:caveats) do
+  def caveats
     <<~EOS
       To remove application from quarantine execute the following command
         xattr -r -d com.apple.quarantine #{appdir}/Archi.app
