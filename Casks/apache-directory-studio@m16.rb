@@ -13,6 +13,7 @@ cask "apache-directory-studio@m16" do
   end
 
   auto_updates false
+  
   app "ApacheDirectoryStudio.app"
 
   zap trash: "~/.ApacheDirectoryStudio"
