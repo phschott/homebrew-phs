@@ -7,8 +7,6 @@ cask "apache-directory-studio@m16" do
   desc "Eclipse-based LDAP browser and directory client"
   homepage "https://directory.apache.org/studio/"
 
-  auto_updates false
-
   livecheck do
     url :url
     regex(%r{href=["']?v?(\d+(?:\.\d+)+[^/]*?)/?["' >]}i)
