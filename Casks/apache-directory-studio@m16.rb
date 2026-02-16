@@ -12,6 +12,8 @@ cask "apache-directory-studio@m16" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+[^/]*?)/?["' >]}i)
   end
 
+  auto_updates false
+
   app "ApacheDirectoryStudio.app"
 
   zap trash: "~/.ApacheDirectoryStudio"
