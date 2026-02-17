@@ -23,8 +23,8 @@ module Utils
     FileUtils.mkdir_p tgt_folder + "/dropins"
     system("unzip", "-q", "-o", src_folder + "/dropins/coArchi2_#{COARCHI_VERSION}.archiplugin", "-x",
            "archi-plugin", "-d", tgt_folder + "/dropins")
-    system("unzip", "-q", "-o", src_folder + "/dropins/jArchi_#{JARCHI_VERSION}.archiplugin", "-x",
-           "archi-plugin", "-d", tgt_folder + "/dropins")
+    #system("unzip", "-q", "-o", src_folder + "/dropins/jArchi_#{JARCHI_VERSION}.archiplugin", "-x",
+    #       "archi-plugin", "-d", tgt_folder + "/dropins")
   end
 end
 
@@ -62,16 +62,6 @@ cask "archi@test" do
     # Add plugins in dropins folder
     ohai "Installing plugins..."
     Utils.install_plugins(@tgt_folder.to_s, @src_folder.to_s)
-
-    # Modify Archi to use custom_splash image
-    ohai "Copying custom splash..."
-    FileUtils.cp("#{@src_folder}/custom_splash.bmp", @app_base_folder.to_s)
-    ohai "Replacing text in Archi.ini..."
-    Utils.change_on_file("#{@app_base_folder}/Archi.ini", "openFile",
-                         "openFile\n-showSplash\n../Eclipse/custom_splash.bmp")
-    # Modify HTML template
-    ohai "Applying patch to reports plugin..."
-    Utils.apply_patch(@template_folder, @src_folder + "/templates.patch")
   end
 
   zap trash: [
