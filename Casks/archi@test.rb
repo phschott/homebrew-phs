@@ -39,7 +39,8 @@ cask "archi@test" do
          intel:        "c0896127a5e684be6b31be73c07258c1a982c15d773cae77c22f6e1172206b92",
          x86_64_linux: "0"
 
-  url "https://github.com/archimatetool/archi.io/releases/download/#{version}/Archi-Mac#{arch}-#{version}.dmg"
+  url "https://github.com/archimatetool/archi.io/releases/download/#{version}/Archi-Mac-#{arch}#{version}.dmg",
+      verified: "github.com/archimatetool/archi.io/"
   name "Archi"
   desc "Open-source ArchiMate modelling toolkit"
   homepage "https://www.archimatetool.com/"
