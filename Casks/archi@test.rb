@@ -1,4 +1,5 @@
-COARCHI_VERSION = "1.3.3".freeze
+COARCHI_VERSION = "0.9.5".freeze
+COARCHI2_VERSION = "1.3.3".freeze
 JARCHI_VERSION = "1.11.0".freeze
 REPORTS_PLUGIN_VERSION = "5.7.0.202509230807".freeze
 APP_LIB_FOLDER = "~/Library/Application Support/Archi".freeze
@@ -21,10 +22,12 @@ module Utils
   # Install plugins
   def self.install_plugins(tgt_folder, src_folder)
     FileUtils.mkdir_p tgt_folder + "/dropins"
+    system("unzip", "-q", "-o", src_folder + "/dropins/coArchi_#{COARCHI_VERSION}.archiplugin", "-x",
+           "archi-plugin", "-d", tgt_folder + "/dropins")
     system("unzip", "-q", "-o", src_folder + "/dropins/coArchi2_#{COARCHI_VERSION}.archiplugin", "-x",
            "archi-plugin", "-d", tgt_folder + "/dropins")
-    #system("unzip", "-q", "-o", src_folder + "/dropins/jArchi_#{JARCHI_VERSION}.archiplugin", "-x",
-    #       "archi-plugin", "-d", tgt_folder + "/dropins")
+    system("unzip", "-q", "-o", src_folder + "/dropins/jArchi_#{JARCHI_VERSION}.archiplugin", "-x",
+           "archi-plugin", "-d", tgt_folder + "/dropins")
   end
 end
 
@@ -32,8 +35,8 @@ cask "archi@test" do
   arch arm: "-Silicon"
 
   version "5.7.0"
-  sha256 arm:   "dbfc38f9a29f8df4c62e38e5fe73a8b85b67bfbfe48e67dece4ae649ae1a6e57",
-         intel: "c0896127a5e684be6b31be73c07258c1a982c15d773cae77c22f6e1172206b92",
+  sha256 arm:          "dbfc38f9a29f8df4c62e38e5fe73a8b85b67bfbfe48e67dece4ae649ae1a6e57",
+         intel:        "c0896127a5e684be6b31be73c07258c1a982c15d773cae77c22f6e1172206b92",
          x86_64_linux: "0"
 
   url "https://github.com/archimatetool/archi.io/releases/download/#{version}/Archi-Mac#{arch}-#{version}.dmg"
