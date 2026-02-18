@@ -24,7 +24,7 @@ module Utils
     FileUtils.mkdir_p tgt_folder + "/dropins"
     system("unzip", "-q", "-o", src_folder + "/dropins/coArchi_#{COARCHI_VERSION}.archiplugin", "-x",
            "archi-plugin", "-d", tgt_folder + "/dropins")
-    system("unzip", "-q", "-o", src_folder + "/dropins/coArchi2_#{COARCHI_VERSION}.archiplugin", "-x",
+    system("unzip", "-q", "-o", src_folder + "/dropins/coArchi2_#{COARCHI2_VERSION}.archiplugin", "-x",
            "archi-plugin", "-d", tgt_folder + "/dropins")
     system("unzip", "-q", "-o", src_folder + "/dropins/jArchi_#{JARCHI_VERSION}.archiplugin", "-x",
            "archi-plugin", "-d", tgt_folder + "/dropins")
