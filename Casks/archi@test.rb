@@ -68,12 +68,7 @@ cask "archi@test" do
     Utils.install_plugins(@tgt_folder.to_s, @src_folder.to_s)
   end
 
-  zap trash: [
-    APP_LIB_FOLDER,
-    "~/Library/Logs/Archi",
-    "~/Library/Preferences/com.archimatetool.editor.plist",
-    "~/Library/Saved Application State/com.archimatetool.editor.savedState",
-  ]
+  zap trash: "~/Library/Application Support/Archi"
 
   caveats do
     <<~EOS
