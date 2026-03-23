@@ -1,13 +1,11 @@
 cask "archi" do
-  arch arm: "Silicon-"
+  arch arm: "-Silicon"
 
-  version "5.7.0"
-  sha256 arm:          "dbfc38f9a29f8df4c62e38e5fe73a8b85b67bfbfe48e67dece4ae649ae1a6e57",
-         intel:        "c0896127a5e684be6b31be73c07258c1a982c15d773cae77c22f6e1172206b92",
-         x86_64_linux: "0"
+  version "5.8.0"
+  sha256 arm:          "0add079afc3aae592cfff44bd9af0e9bffd0dcddad783a68c58721e0878015bc",
+         intel:        "ab6a18c6d4b5d39ee368d307e1e15bf8db485a6ea68e54b69c2ffeffc2a2d7f1"
 
-  url "https://github.com/archimatetool/archi.io/releases/download/#{version}/Archi-Mac-#{arch}#{version}.dmg",
-      verified: "github.com/archimatetool/archi.io/"
+  url "https://www.archimatetool.com/downloads/archi/#{version}/Archi-Mac#{arch}-#{version}.dmg"
   name "Archimate modeling"
   desc "Toolkit for the ArchiMate modelling language"
   homepage "https://www.archimatetool.com/"
