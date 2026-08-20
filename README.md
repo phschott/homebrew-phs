@@ -35,3 +35,7 @@ Alternatively you can install cask with --no-quarantine option which will do the
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+
+## License
+
+Code is under the [BSD 2 Clause (NetBSD) license](LICENSE).
