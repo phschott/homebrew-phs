@@ -34,9 +34,9 @@ end
 cask "archi@test" do
   arch arm: "-Silicon"
 
-  version "5.8.0"
-  sha256 arm:   "0add079afc3aae592cfff44bd9af0e9bffd0dcddad783a68c58721e0878015bc",
-         intel: "ab6a18c6d4b5d39ee368d307e1e15bf8db485a6ea68e54b69c2ffeffc2a2d7f1"
+  version "5.9.0"
+  sha256 arm:   "3d6f49b780783f2a0268e7186a35380ab060e3656087257913b28e07ebac14cf",
+         intel: "a061e25b7bb2b8f276cb32366745fc96b251168bb5cac50c38ef51a37cbf9448"
 
   url "https://github.com/archimatetool/archi.io/releases/download/#{version}/Archi-Mac#{arch}-#{version}.dmg",
       verified: "github.com/archimatetool/archi.io/"
@@ -51,7 +51,7 @@ cask "archi@test" do
 
   auto_updates false
   conflicts_with cask: "archi"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Archi.app"
 

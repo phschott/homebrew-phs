@@ -12,6 +12,7 @@ cask "tomtommydriveconnect" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MyDriveConnect.mpkg"
 
