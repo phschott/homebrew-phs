@@ -21,33 +21,6 @@ Then install some custom stuff:
     brew install awesome-scripts
     brew install --cask some-app
 
-## How to contribute to this Tap
-### Getting Set Up To Contribute
-First, you'll need to fork the repository and add your copy as a remote (can also be done with hub fork).
-
-1: Fork the repository in GitHub with the Fork button.
-
-2: If you have not already done so, add your GitHub fork as a remote for your homebrew-cask Tap:
-
-```bash
-$ github_user='<my-github-username>'
-$ cd "$(brew --repository)"/Library/Taps/phschott/homebrew-phs
-$ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-phs"
-```
-
-3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is up-to-date.
-
-4: Switch to a new branch (ie. new-feature), and work from there: git checkout -b new-feature.
-
-### Adding a Cask
-With a bit of work, you can create a new Cask. The document [Adding A Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md) will help you create, test, and submit a new Cask.
-
-### Update a Cask version
-If you need to update the cask to latest version, run the following command line to update the script and then push to a new branch in github before creating a pull request.
-```bash
-    brew bump-cask-pr --write-only --version {latest version} {cask}
-```
-
 ## Resolving damaged issue
 If your Mac states that it cannot run App because it is "damaged" (it isn't) run the following command from the Terminal app.
 
