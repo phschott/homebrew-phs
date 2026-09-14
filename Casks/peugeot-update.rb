@@ -2,8 +2,7 @@ cask "peugeot-update" do
   version "1.6.1"
   sha256 :no_check
 
-  url "https://d1tik0o5ahgjm.cloudfront.net/peugeot/peugeot_update.dmg",
-      verified: "d1tik0o5ahgjm.cloudfront.net/peugeot/"
+  url "https://d1tik0o5ahgjm.cloudfront.net/peugeot/peugeot_update.dmg"
   name "Peugeot Update"
   desc "Update Peugeot system"
   homepage "https://www.peugeot.fr/"
