@@ -30,4 +30,8 @@ class DcevmAT18 < Formula
         sudo ln -sfn #{opt_libexec} /Library/Java/JavaVirtualMachines/dcevm-8.jdk
     EOS
   end
+
+  test do
+    assert_match "1.8", shell_output("#{bin}/java -version 2>&1")
+  end
 end
