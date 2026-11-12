@@ -30,4 +30,8 @@ class DcevmAT11 < Formula
         sudo ln -sfn #{opt_libexec} /Library/Java/JavaVirtualMachines/dcevm-11.jdk
     EOS
   end
+
+  test do
+    assert_match "11.0", shell_output("#{bin}/java -version 2>&1")
+  end
 end
